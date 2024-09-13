@@ -4,14 +4,13 @@ using UnityEngine;
 
 public class PlayerScript : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public int MaxHealth;
+    public int Health;
+    public int Damage;
+    public int MoveSpeed;
+    public int AttackSpeed;
 
-    // Update is called once per frame
-    void Update()
+    private void Start()
     {
         
     }
