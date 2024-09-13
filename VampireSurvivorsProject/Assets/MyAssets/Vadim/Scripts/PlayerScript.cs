@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerScript : MonoBehaviour
 {
-    public int MaxHealth;
+    public int MaxHealth; // Health Limit
     public int Health;
     public int Damage;
     public int MoveSpeed;
@@ -13,5 +13,15 @@ public class PlayerScript : MonoBehaviour
     private void Start()
     {
         
+    }
+    public void Heal(int amount)
+    {
+        Health += amount;
+        if (Health > MaxHealth)
+        {
+            Health = MaxHealth;
+        }
+
+        Debug.Log("Health: " + Health);
     }
 }

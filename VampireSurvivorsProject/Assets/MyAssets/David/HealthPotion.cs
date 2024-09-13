@@ -7,10 +7,10 @@ public class HealthPotion : MonoBehaviour
     public int addhealth = 20;
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("MainCharacter"))
+        if (other.CompareTag("Player"))
         {
-            PlayerHealth playerHealth = other.GetComponent<PlayerHealth>();
-            playerHealth.Heal(addhealth);
+            PlayerScript playerScript = other.GetComponent<PlayerScript>();
+            playerScript.Heal(addhealth);
             Destroy(gameObject);
         }
     }
